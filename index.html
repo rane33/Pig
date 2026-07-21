@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ff4e50,#fc913a);
+font-family:Arial,sans-serif;
+text-align:center;
+color:white;
+}
+
+.box{
+padding:20px;
+}
+
+h1{
+font-size:3em;
+animation:zoom 2s infinite;
+}
+
+@keyframes zoom{
+50%{transform:scale(1.1);}
+}
+
+button{
+padding:15px 25px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h1>🎂 Happy Birthday 🎉</h1>
+
+<h2>Dear Friend</h2>
+
+<p>
+Wishing you happiness, success and lots of smiles.
+May all your dreams come true!
+</p>
+
+<button onclick="showWish()">Open Surprise 🎁</button>
+</div>
+
+<script>
+function showWish(){
+alert("🥳 Have an amazing birthday and a wonderful year ahead! ❤️");
+}
+</script>
+
+</body>
+</html>
