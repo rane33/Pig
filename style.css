@@ -198,3 +198,142 @@ transform:scale(1.08);
 box-shadow:0 0 60px hotpink;
 
 }
+/* ==========================================
+   FLOATING STARS
+========================================== */
+
+.stars,
+.stars2,
+.stars3{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:-1;
+}
+
+.stars::before,
+.stars2::before,
+.stars3::before{
+
+content:"";
+
+position:absolute;
+
+width:3px;
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+50px 80px white,
+120px 300px white,
+220px 150px white,
+350px 500px white,
+480px 200px white,
+620px 420px white,
+760px 120px white,
+900px 340px white,
+1050px 180px white,
+1180px 500px white,
+1300px 80px white,
+1420px 280px white,
+1540px 450px white,
+1680px 220px white,
+1820px 550px white;
+
+animation:twinkle 4s infinite alternate;
+
+}
+
+.stars2::before{
+
+animation-duration:7s;
+opacity:.6;
+
+}
+
+.stars3::before{
+
+animation-duration:10s;
+opacity:.35;
+
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.2;
+transform:scale(.7);
+
+}
+
+100%{
+
+opacity:1;
+transform:scale(1.5);
+
+}
+
+}
+
+
+/* ==========================================
+   FLOATING PARTICLES
+========================================== */
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background-image:
+
+radial-gradient(circle,#ff69b4 1px,transparent 1px),
+radial-gradient(circle,#ffd700 1px,transparent 1px),
+radial-gradient(circle,#00ffff 1px,transparent 1px);
+
+background-size:
+180px 180px,
+250px 250px,
+320px 320px;
+
+animation:particles 45s linear infinite;
+
+opacity:.25;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+@keyframes particles{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-600px);
+
+}
+
+}
