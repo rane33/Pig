@@ -96,6 +96,33 @@ birthdayData.heading+"<br>"+birthdayData.name;
 document.getElementById("message").innerHTML=
 birthdayData.message.replace(/\n/g,"<br>");
 
+
+const galleryImages = document.querySelectorAll(".gallery img");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImg = document.getElementById("lightboxImg");
+
+galleryImages.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+lightbox.classList.add("active");
+
+lightboxImg.src=img.src;
+
+});
+
+});
+
+lightbox.addEventListener("click",()=>{
+
+lightbox.classList.remove("active");
+
+});
+
+  
+
 </script>
 
 </body>
