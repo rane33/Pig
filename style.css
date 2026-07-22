@@ -1,1 +1,200 @@
+/* =========================================
+   GLOBAL SETTINGS
+========================================= */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#08081c;
+    color:white;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    font-family:'Poppins',sans-serif;
+    cursor:pointer;
+    transition:.4s;
+}
+
+/* =========================================
+   ANIMATED BACKGROUND
+========================================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:300%;
+    height:300%;
+    top:-100%;
+    left:-100%;
+    background:
+    radial-gradient(circle,#ffffff22 1px,transparent 1px);
+    background-size:45px 45px;
+    animation:starsMove 70s linear infinite;
+    z-index:-2;
+}
+
+@keyframes starsMove{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(400px);
+}
+
+}
+
+/* =========================================
+   CENTER CARD
+========================================= */
+
+.overlay{
+
+width:90%;
+max-width:900px;
+
+margin:auto;
+
+margin-top:8vh;
+
+padding:50px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 0 50px rgba(255,0,140,.25);
+
+text-align:center;
+
+animation:fadeIn 2s;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.title{
+
+font-size:55px;
+
+font-weight:700;
+
+margin-top:25px;
+
+text-shadow:0 0 30px hotpink;
+
+}
+
+.subtitle{
+
+margin-top:25px;
+
+font-size:22px;
+
+opacity:.9;
+
+line-height:1.8;
+
+}
+
+/* =========================================
+   GIFT
+========================================= */
+
+.gift{
+
+font-size:90px;
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn{
+
+margin-top:45px;
+
+padding:18px 60px;
+
+font-size:22px;
+
+border:none;
+
+border-radius:60px;
+
+background:linear-gradient(45deg,#ff2d75,#ff9800);
+
+color:white;
+
+box-shadow:0 0 35px #ff2d75;
+
+}
+
+.btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 60px hotpink;
+
+}
