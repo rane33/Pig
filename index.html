@@ -77,6 +77,8 @@ position:relative;
 
 }after bg showedup*/
 
+/* 
+again after nice pic got zoom in but birthdy card was too much transparent  
 body{
 
 margin:0;
@@ -102,7 +104,25 @@ animation:bgTransition 5s forwards;
 position:relative;
 
 }
-  
+  */
+
+body{
+
+margin:0;
+min-height:100svh;
+overflow:hidden;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(-45deg,#9be7ff,#d4f5ff,#f7d6ff,#c8f7ff);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+
+position:relative;
+
+}
   
 /*body::before{
 
@@ -125,7 +145,7 @@ z-index:-1;
 }
 */
 
- /*below keyframe added after bg showdeup for new exp */
+ /*below keyframe added after bg showdeup for new exp with zoming effect and got blur  
 
 @keyframes bgTransition{
 
@@ -162,6 +182,37 @@ background-size:120%;
 }
 
 }
+ */
+#intro{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:999;
+
+animation:introFade 1.5s forwards;
+
+animation-delay:3s;
+
+overflow:hidden;
+
+}
+
+#intro img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+animation:introZoom 3s linear forwards;
+
+}
 
 
 
@@ -176,6 +227,45 @@ background-size:120%;
 100%{background-position:0% 50%;}
 
 }
+@keyframes introZoom{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.12);
+
+}
+
+}
+
+@keyframes introFade{
+
+from{
+
+opacity:1;
+
+}
+
+to{
+
+opacity:0;
+visibility:hidden;
+pointer-events:none;
+
+}
+
+}
+
+
+
+
+
+ 
 
 .circle{
 
@@ -368,7 +458,7 @@ transform:translateY(50px) scale(.92);
 
 animation:showCard 1.5s ease forwards;
 
-animation-delay:4.5s;
+animation-delay:3.2s;
 
 
 }
@@ -452,7 +542,7 @@ opacity:0;
 
 animation:fadeUp .8s forwards;
 
-animation-delay:5.3s;
+animation-delay:3.8s;
 
 }
 
@@ -488,7 +578,7 @@ opacity:0;
 
 animation:fadeUp .8s forwards;
 
-animation-delay:5.6s;
+animation-delay:4.1s;
 
 
 
@@ -517,7 +607,7 @@ opacity:0;
 
 animation:fadeUp .8s forwards;
 
-animation-delay:5.9s;
+animation-delay:4.4s;
 
 
 }
@@ -545,7 +635,7 @@ opacity:0;
 
 animation:fadeUp .8s forwards;
 
-animation-delay:6.2s;
+animation-delay:4.7s;
 }
 
 /*button{
@@ -602,7 +692,7 @@ opacity:0;
 
 animation:fadeUp .8s forwards;
 
-animation-delay:6.5s;
+animation-delay:5s;
 
 }
 
@@ -625,6 +715,10 @@ transform:scale(.95);
 </head>
 
 <body>
+
+<div id="intro">
+<img src="images/bg.jpg" alt="">
+</div>
 
 <div class="circle"></div>
 <div class="circle"></div>
