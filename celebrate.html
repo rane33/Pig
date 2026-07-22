@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celebrate</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(180deg,#050816,#09163a,#132c66);
+
+overflow:hidden;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+}
+
+canvas{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:1;
+
+}
+
+.container{
+
+position:relative;
+
+z-index:10;
+
+text-align:center;
+
+}
+
+.title{
+
+font-size:58px;
+
+font-weight:700;
+
+text-shadow:0 0 25px hotpink;
+
+animation:titleGlow 2s infinite alternate;
+
+}
+
+.subtitle{
+
+margin-top:18px;
+
+font-size:22px;
+
+letter-spacing:2px;
+
+opacity:.9;
+
+}
+
+.cake{
+
+position:relative;
+
+width:260px;
+
+margin:70px auto 20px;
+
+animation:rise 2.5s ease;
+
+}
+
+.layer1{
+
+height:80px;
+
+background:#ff8fa3;
+
+border-radius:18px;
+
+}
+
+.layer2{
+
+width:210px;
+
+height:70px;
+
+background:#ffc2d1;
+
+margin:auto;
+
+margin-top:-8px;
+
+border-radius:18px;
+
+}
+
+.layer3{
+
+width:160px;
+
+height:60px;
+
+background:#ffe5ec;
+
+margin:auto;
+
+margin-top:-8px;
+
+border-radius:18px;
+
+}
+
+.icing{
+
+width:260px;
+
+height:18px;
+
+background:white;
+
+border-radius:20px;
+
+margin-top:-8px;
+
+}
+
+.candle{
+
+width:12px;
+
+height:55px;
+
+background:#00e5ff;
+
+margin:auto;
+
+margin-top:-170px;
+
+border-radius:6px;
+
+position:relative;
+
+}
+
+.flame{
+
+width:18px;
+
+height:18px;
+
+background:gold;
+
+border-radius:50%;
+
+position:absolute;
+
+left:-3px;
+
+top:-18px;
+
+box-shadow:0 0 30px yellow;
+
+animation:flicker .3s infinite alternate;
+
+}
+
+.message{
+
+margin-top:45px;
+
+font-size:26px;
+
+font-weight:500;
+
+opacity:0;
+
+animation:showText 2s forwards;
+
+animation-delay:2.2s;
+
+}
+
+@keyframes rise{
+
+0%{
+
+transform:translateY(600px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes flicker{
+
+from{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+to{
+
+transform:scale(.85);
+
+opacity:.8;
+
+}
+
+}
+
+@keyframes titleGlow{
+
+from{
+
+text-shadow:0 0 20px hotpink;
+
+}
+
+to{
+
+text-shadow:0 0 50px gold;
+
+}
+
+}
+
+@keyframes showText{
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+.balloon{
+
+position:absolute;
+
+bottom:-150px;
+
+font-size:45px;
+
+animation:float 12s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-130vh);
+
+}
+
+}
+
+.b1{left:8%;animation-delay:0s;}
+.b2{left:20%;animation-delay:2s;}
+.b3{left:35%;animation-delay:4s;}
+.b4{left:52%;animation-delay:1s;}
+.b5{left:70%;animation-delay:3s;}
+.b6{left:88%;animation-delay:5s;}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id="fireworks"></canvas>
+
+<div class="balloon b1">🎈</div>
+<div class="balloon b2">🎈</div>
+<div class="balloon b3">🎈</div>
+<div class="balloon b4">🎈</div>
+<div class="balloon b5">🎈</div>
+<div class="balloon b6">🎈</div>
+
+<div class="container">
+
+<h1 class="title" id="name">
+Happy Birthday
+</h1>
+
+<div class="subtitle">
+May all your dreams come true ❤️
+</div>
+
+<div class="cake">
+
+<div class="layer3"></div>
+
+<div class="layer2"></div>
+
+<div class="layer1"></div>
+
+<div class="icing"></div>
+
+<div class="candle">
+
+<div class="flame"></div>
+
+</div>
+
+</div>
+
+<div class="message">
+
+Have the most wonderful birthday ever! 🎂🥳❤️
+
+</div>
+
+</div>
+
+<script>
+
+const c=document.getElementById("fireworks");
+
+const ctx=c.getContext("2d");
+
+c.width=innerWidth;
+
+c.height=innerHeight;
