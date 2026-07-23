@@ -1,21 +1,15 @@
 const birthdayData = {
 
-    name: "Your Friend",
+    name: "Shamal",
 
     heading: "🎉 Happy Birthday 🎉",
 
     message: `
-Wishing you endless happiness,
-good health,
-success,
-love,
-and lots of beautiful memories.
+Life moves fast.
+Memories never really grow old.
 
-May every dream come true.
-
-Have an amazing birthday!
-
-❤️❤️❤️
+Let's revisit a few
+and enjoy them once again. 🤍
 `,
 
     photos: [
