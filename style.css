@@ -470,7 +470,6 @@ filter .45s ease;
 filter:brightness(.96);
 
 } */
-
 .gallery img{
 
 width:100%;
@@ -491,13 +490,13 @@ box-shadow:0 12px 35px rgba(0,0,0,.35);
 
 opacity:0;
 
-transform:translateY(70px);
+transform:translateY(120px) scale(.8);
 
 transition:
 
-opacity .8s ease,
+opacity 1.2s ease,
 
-transform .8s ease,
+transform 1.2s ease,
 
 box-shadow .45s ease,
 
@@ -510,7 +509,7 @@ filter:brightness(.96);
 
 opacity:1;
 
-transform:translateY(0);
+transform:translateY(0) scale(1);
 
 }
 
