@@ -17,9 +17,16 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-
+/*
 background:linear-gradient(180deg,#050816,#09163a,#132c66);
-
+*/
+background:linear-gradient(
+180deg,
+#170307 0%,
+#2b0710 45%,
+#4a0c1d 100%
+);
+  
 overflow:hidden;
 
 height:100vh;
@@ -57,7 +64,7 @@ z-index:10;
 text-align:center;
 
 }
-
+/*
 .title{
 
 font-size:58px;
@@ -67,19 +74,37 @@ font-weight:700;
 text-shadow:0 0 25px hotpink;
 
 animation:titleGlow 2s infinite alternate;
+*/
+.title{
 
+font-size:60px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+text-shadow:
+0 0 12px rgba(255,255,255,.5),
+0 0 28px rgba(255,90,140,.45);
+
+animation:titleGlow 2.5s infinite alternate;
+
+}  
 }
 
 .subtitle{
 
-margin-top:18px;
+margin-top:20px;
 
 font-size:22px;
 
-letter-spacing:2px;
+font-weight:300;
+
+letter-spacing:1px;
 
 opacity:.9;
 
+}
 }
 
 .cake{
@@ -196,7 +221,16 @@ margin-top:45px;
 
 font-size:26px;
 
-font-weight:500;
+font-weight:400;
+
+line-height:1.8;
+
+max-width:720px;
+
+margin-left:auto;
+margin-right:auto;
+
+padding:0 20px;
 
 opacity:0;
 
@@ -205,7 +239,6 @@ animation:showText 2s forwards;
 animation-delay:2.2s;
 
 }
-
 @keyframes rise{
 
 0%{
@@ -303,6 +336,51 @@ transform:translateY(-130vh);
 .b5{left:70%;animation-delay:3s;}
 .b6{left:88%;animation-delay:5s;}
 
+
+
+@media(max-width:768px){
+
+.title{
+
+font-size:42px;
+
+line-height:1.2;
+
+padding:0 16px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+padding:0 20px;
+
+}
+
+.message{
+
+font-size:20px;
+
+padding:0 20px;
+
+line-height:1.6;
+
+}
+
+.cake{
+
+transform:scale(.82);
+
+margin-top:55px;
+
+}
+
+}
+
+
+
+  
 </style>
 
 </head>
