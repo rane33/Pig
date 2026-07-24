@@ -2,7 +2,7 @@ const birthdayData = {
 
     name: "Shamal",
 
-    heading: "🎉 Happy Birthday 🎉",
+    heading: " Happy Birthday ",
 
     message: `
 Life moves fast.
