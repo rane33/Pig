@@ -304,6 +304,9 @@ transform:translate(-50%,0);
 <body>
 
 <canvas id="fireworks"></canvas>
+<audio id="birthdayMusic" preload="auto">
+    <source src="birthday.mp3" type="audio/mpeg">
+</audio>
 
 <div id="cakeContainer">
 
@@ -325,3 +328,22 @@ const ctx=c.getContext("2d");
 c.width=innerWidth;
 
 c.height=innerHeight;
+
+  
+</script>
+<script>
+
+const btn = document.getElementById("celebrateBtn");
+const music = document.getElementById("birthdayMusic");
+
+btn.addEventListener("click", function(){
+
+    music.currentTime = 0;
+
+    music.play();
+
+    btn.innerHTML = "🎉 Happy Birthday 🎉";
+
+});
+
+</script>
