@@ -34,11 +34,17 @@ font-family:'Poppins',sans-serif;
 
 background:
 linear-gradient(
-180deg,
+/*180deg,
 #07132d 0%,
 #0d1b3f 25%,
 #10153a 55%,
 #08081c 100%
+   */
+180deg,
+#120205 0%,
+#22060b 20%,
+#320913 55%,
+#170307 100%
 );
 
 color:white;
@@ -90,7 +96,7 @@ left:0;
 width:100%;
 height:100%;
 
-background:
+/*background:
 
 radial-gradient(circle at 15% 20%,
 rgba(255,170,220,.16),
@@ -103,6 +109,22 @@ transparent 25%),
 radial-gradient(circle at 50% -10%,
 rgba(255,255,255,.08),
 transparent 35%);
+*/
+
+background:
+
+radial-gradient(circle at 20% 15%,
+rgba(255,120,150,.18),
+transparent 22%),
+
+radial-gradient(circle at 80% 20%,
+rgba(255,190,120,.10),
+transparent 26%),
+
+radial-gradient(circle at 50% -5%,
+rgba(255,255,255,.05),
+transparent 40%);
+   
 
 pointer-events:none;
 
@@ -401,13 +423,20 @@ left:0;
 
 width:100%;
 height:100%;
-
+/*
 background-image:
 
 radial-gradient(circle,#ff69b4 1px,transparent 1px),
 radial-gradient(circle,#ffd700 1px,transparent 1px),
 radial-gradient(circle,#00ffff 1px,transparent 1px);
+*/
 
+background-image:
+
+radial-gradient(circle,#ffb3c7 1px,transparent 1px),
+radial-gradient(circle,#ffd79a 1px,transparent 1px),
+radial-gradient(circle,#ffffff 1px,transparent 1px);
+   
 background-size:
 180px 180px,
 250px 250px,
