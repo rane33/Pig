@@ -14,7 +14,7 @@ html{
 }
 
 
-body{
+/*body{
 
 font-family:'Poppins',sans-serif;
 
@@ -27,7 +27,28 @@ overflow-x:hidden;
 
 min-height:100vh;
 
+}*/
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#07132d 0%,
+#0d1b3f 25%,
+#10153a 55%,
+#08081c 100%
+);
+
+color:white;
+
+overflow-x:hidden;
+
+min-height:100vh;
+
 }
+
 
 a{
     text-decoration:none;
@@ -43,7 +64,7 @@ button{
    ANIMATED BACKGROUND
 ========================================= */
 
-body::before{
+/*body::before{
     content:"";
     position:fixed;
     width:300%;
@@ -56,6 +77,39 @@ body::before{
     animation:starsMove 70s linear infinite;
     z-index:-2;
 }
+*/
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+
+radial-gradient(circle at 15% 20%,
+rgba(255,170,220,.16),
+transparent 22%),
+
+radial-gradient(circle at 85% 15%,
+rgba(120,170,255,.16),
+transparent 25%),
+
+radial-gradient(circle at 50% -10%,
+rgba(255,255,255,.08),
+transparent 35%);
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
 
 @keyframes starsMove{
 
@@ -403,51 +457,45 @@ text-align:center;
 
 #heading{
 
-font-family:'Great Vibes',cursive;
+font-family:'Cormorant Garamond',serif;
 
-font-size:78px;
+font-size:56px;
 
-font-weight:400;
+font-weight:600;
 
-line-height:1.05;
+line-height:1.15;
 
-margin-top:30px;
+margin-top:35px;
 
-margin-bottom:35px;
+margin-bottom:30px;
 
-color:#fff;
+color:#ffffff;
 
 text-shadow:
 
-0 0 12px rgba(255,255,255,.8),
+0 0 12px rgba(255,255,255,.45),
 
-0 0 35px rgba(255,105,180,.55);
+0 0 30px rgba(255,105,180,.18);
 
-animation:fadeHeading 2s ease;
-}
+animation:fadeHeading 2s ease;}
 
 .message{
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:33px;
+font-size:28px;
 
 font-weight:500;
 
-line-height:1.7;
+line-height:1.75;
 
-letter-spacing:.3px;
+max-width:760px;
 
-max-width:820px;
+margin:0 auto 80px;
 
-margin:0 auto 90px;
+color:#f6f4ff;
 
-color:#faf7ff;
-
-text-shadow:0 0 10px rgba(255,255,255,.15);
-
-animation:fadeMessage 3s ease;
-}
+animation:fadeMessage 3s ease;}
 
 .gallery{
 
@@ -752,6 +800,28 @@ font-size:30px;
 letter-spacing:8px;
 
 margin:10px 0;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+#heading{
+
+font-size:38px;
+
+}
+
+.message{
+
+font-size:22px;
+
+line-height:1.65;
+
+padding:0 12px;
 
 }
 
