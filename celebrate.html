@@ -181,7 +181,7 @@ opacity:.9;
 }
 }
 
-.cake{
+/*.cake{
 
 position:relative;
 
@@ -190,6 +190,26 @@ width:260px;
 margin:70px auto 20px;
 
 animation:rise 2.5s ease;
+
+}*/
+
+.cake{
+
+position:absolute;
+
+bottom:20px;
+
+left:50%;
+
+transform:translateX(-50%) scale(.65);
+
+width:260px;
+
+opacity:0.85;
+
+animation:rise 2.5s ease;
+
+z-index:5;
 
 }
 
@@ -313,6 +333,7 @@ animation:showText 2s forwards;
 animation-delay:2.2s;
 
 }
+/*
 @keyframes rise{
 
 0%{
@@ -324,6 +345,22 @@ transform:translateY(600px);
 100%{
 
 transform:translateY(0);
+
+}
+
+}*/
+
+@keyframes rise{
+
+0%{
+
+transform:translate(-50%,600px);
+
+}
+
+100%{
+
+transform:translate(-50%,0);
 
 }
 
@@ -444,9 +481,17 @@ line-height:1.6;
 
 .cake{
 
-transform:scale(.82);
+/*
+  transform:scale(.82);
 
-margin-top:55px;
+margin-top:55px;*/
+.cake{
+
+transform:translateX(-50%) scale(.55);
+
+bottom:15px;
+
+}
 
 }
 
@@ -472,12 +517,12 @@ margin-top:55px;
 
 <div class="container">
 
-<h1 class="title" id="name">
-Happy Birthday
+/*<h1 class="title" id="name">
+
 </h1>
 
 <div class="subtitle">
-May all your dreams come true ❤️
+
 </div>
 
  
